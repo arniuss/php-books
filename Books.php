@@ -17,7 +17,7 @@ class Books
         $sql = 'SELECT * FROM books WHERE 1=1';
         $params = [];
 
-        if(!empty($p_isbn)){
+        if(!empty($p_ISBN)){
             $sql .= " AND ISBN LIKE :ISBN";
             $params[':ISBN'] = '%' . $p_ISBN . '%';
         }

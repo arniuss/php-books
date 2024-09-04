@@ -5,8 +5,8 @@ require_once("Books.php");
 $conn = new DbConnect();
 $dbConnection = $conn->connect();
 
-$instanceCars = new Books($dbConnection);
-$books = $instanceCars->getBooks();
+$instanceBooks = new Books($dbConnection);
+$books = $instanceBooks->getBooks();
 
 if (isset($_GET['ISBN']) || isset($_GET['author_name']) || isset($_GET['author_lastname']) || isset($_GET['book_name']) || isset($_GET['description'])) {
     $selISBN = $_GET['ISBN'];
@@ -14,7 +14,7 @@ if (isset($_GET['ISBN']) || isset($_GET['author_name']) || isset($_GET['author_l
     $selAuthor_lastname = $_GET['author_lastname'];
     $selBook_name = $_GET['book_name'];
     $selDescription = $_GET['description'];
-    $selBooks = $instanceCars->filterBooks($selISBN, $selAuthor_name, $selAuthor_lastname, $selBook_name, $selDescription);
+    $selBooks = $instanceBooks->filterBooks($selISBN, $selAuthor_name, $selAuthor_lastname, $selBook_name, $selDescription);
 } else {
     $selBooks = $books;
 }

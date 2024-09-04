@@ -1,10 +1,10 @@
 <?php
 class DbConnect 
 { 
-    private $server = 'localhost'; 
-    private $dbname = 'books';
-    private $user = 'root';
-    private $pass = ''; 
+    private $server = 'sql8.endora.cz'; 
+    private $dbname = 'dominiksdb';
+    private $user = 'arnius';
+    private $pass = 'Abcd1234.'; 
     private $options = array( 
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, 
         PDO::ATTR_EMULATE_PREPARES => false, 
