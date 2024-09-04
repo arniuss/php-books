@@ -30,8 +30,8 @@ class Books
             $params[':author_lastname'] = '%' . $p_author_lastname . '%';
         }
         if(!empty($p_book_name)){
-            $sql .= " AND author_lastname LIKE :author_lastname";
-            $params[':author_lastname'] = '%' . $p_author_lastname . '%';
+            $sql .= " AND book_name LIKE :book_name";
+            $params[':book_name'] = '%' . $p_book_name . '%';
         }
         if(!empty($p_description)){
             $sql .= " AND description LIKE :description";
